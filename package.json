@@ -1,0 +1,44 @@
+{
+  "name": "@syakod/prettier-config",
+  "version": "0.0.0",
+  "description": "syakod's Prettier Config",
+  "keywords": [
+    "prettier-config",
+    "prettier",
+    "config",
+    "syakod"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syakod/prettier-config.git"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "syakod",
+    "email": "hi@syakod.com",
+    "url": "https://syakod.com"
+  },
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "format": "prettier . --write",
+    "release": "bumpp --commit --push --tag && pnpm publish -r --no-git-checks"
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.5"
+  },
+  "devDependencies": {
+    "bumpp": "^9.2.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
