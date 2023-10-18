@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * @type {import('prettier').Config & import('@ianvs/prettier-plugin-sort-imports').PrettierConfig}
+ * @type {import('prettier').Config}
  */
 module.exports = {
   singleQuote: true,
@@ -37,27 +37,5 @@ module.exports = {
       },
     })),
   ],
-  plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
-  importOrder: [
-    '^(react/(.*)$)|^(react$)',
-    '^(next/(.*)$)|^(next$)',
-    '^(astro/(.*)$)|(astro:(.*)$)|^(astro$)',
-    '<BUILTIN_MODULES>',
-    '',
-    '<THIRD_PARTY_MODULES>',
-    '',
-    '^types$',
-    '^@/types/(.*)$',
-    '^@/config/(.*)$',
-    '^@/lib/(.*)$',
-    '^@/hooks/(.*)$',
-    '^@/components/(.*)$',
-    '^@/styles/(.*)$',
-    '^@/app/(.*)$',
-    '^@/(.*)$',
-    '',
-    '^[./]',
-  ],
-  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-  importOrderTypeScriptVersion: '5.0.0',
+  plugins: ['prettier-plugin-tailwindcss'],
 }
